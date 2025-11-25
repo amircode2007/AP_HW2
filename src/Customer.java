@@ -1,6 +1,6 @@
 public class Customer extends Person {
     private String customerId;
-    private int loyaltyPoints;
+    private int loyaltyPoints=0;
 
     public Customer(String name, String phoneNumber, String customerId, int loyaltyPoints) {
         super(name, phoneNumber);
@@ -8,12 +8,27 @@ public class Customer extends Person {
         this.loyaltyPoints = loyaltyPoints;
     }
 
-    public void addLoyaltyPoints() {
-
+    public void addLoyaltyPoints(double totalAmount) {
+        if(totalAmount>500000 && totalAmount<1000000)
+        {
+            setLoyaltyPoints(getLoyaltyPoints()+1);
+        }
+        if(totalAmount>1000000)
+        {
+            setLoyaltyPoints(getLoyaltyPoints()+2);
+        }
     }
 
-    public void getDiscount() {
-
+    public double getDiscount() {
+        if(getLoyaltyPoints()>5)
+        {
+           return 0.1;
+        }
+        if(getLoyaltyPoints()>3 && getLoyaltyPoints()<5)
+        {
+           return 0.05;
+        }
+        return 1;
     }
     public String getCustomerId()
     {

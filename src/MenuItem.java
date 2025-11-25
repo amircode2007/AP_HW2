@@ -23,6 +23,11 @@ public abstract class MenuItem {
     {
         return this.price;
     }
+    public void setPrice(double price)
+    {
+        this.price=price;
+    }
+
     public String getCategory()
     {
         return this.category;
