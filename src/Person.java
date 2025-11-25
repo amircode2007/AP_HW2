@@ -1,4 +1,4 @@
-public class Person {
+public abstract class Person {
   private   String name;
     private  String phoneNumber;
     public Person(String name,String phoneNumber)
@@ -6,10 +6,8 @@ public class Person {
         this.name=name;
         this.phoneNumber=phoneNumber;
     }
-    public void getInfo()
-    {
+    public abstract  void getInfo();
 
-    }
     public  String getName()
     {
         return this.name;

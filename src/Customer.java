@@ -15,6 +15,22 @@ public class Customer extends Person {
     public void getDiscount() {
 
     }
+    public String getCustomerId()
+    {
+        return customerId;
+    }
+    public int getLoyaltyPoints()
+    {
+        return loyaltyPoints;
+    }
+    public void setCustomerId(String customerId){
+        this.customerId=customerId;
+    }
+    public void setLoyaltyPoints(int loyaltyPoints)
+    {
+        this.loyaltyPoints=loyaltyPoints;
+    }
+
 
     @Override
     public void getInfo() {
