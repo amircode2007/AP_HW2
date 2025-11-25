@@ -4,7 +4,7 @@ public class Employee extends Person {
     private double salary;
     private int housrsWorked;
 
-    public Employee(String name, String phoneNumber, String employeeId, String position, double salary, int housrsWorked) {
+    public Employee(String name, String phoneNumber, String position, String employeeId, double salary) {
         super(name, phoneNumber);
         this.employeeId = employeeId;
         this.position = position;
@@ -29,6 +29,7 @@ public class Employee extends Person {
     }
 
     public double calculateSalary() {
+
         return (1.5 * getSalary()) * (housrsWorked / 160);
     }
 

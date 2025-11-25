@@ -17,7 +17,7 @@ public abstract class MenuItem {
     }
     public String getName()
     {
-        return getName();
+        return this.name;
     }
     public double getPrice()
     {

@@ -1,9 +1,9 @@
 public class Food extends MenuItem{
   private  String spiceLevel;
      private int preparationTime;
-    public Food(String itemId, String name, double price, String category ,String spiceLevel,int preparationTime)
+    public Food(String itemId, String name, double price,String spiceLevel,int preparationTime)
     {
-    super(itemId,name,price,category);
+    super(itemId,name,price,"food");
     this.spiceLevel=spiceLevel;
     this.preparationTime=preparationTime;
     }

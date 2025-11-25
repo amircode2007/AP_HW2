@@ -5,18 +5,15 @@ public class Order {
     private int orderId;
     private Customer customer;
     private List<MenuItem> items;
-   private double totalAmount;
+    private double totalAmount=0;
 
-    public Order( Customer customer, List<MenuItem> items, double totalAmount) {
+    public Order( Customer customer, List<MenuItem> items) {
         this.orderId = orderCounter++;
         this.customer = customer;
         this.items = items;
         calculateTotal();
     }
-    public double getTotalAmount()
-    {
-        return this.totalAmount;
-    }
+
     public void calculateTotal()
     {
         double sum=0;
@@ -31,11 +28,15 @@ public class Order {
     }
     public void getOrderSummary()
     {
-        System.out.print("OrderI ID: "+this.orderId+", "+"Customer: "+this.customer.getName()+", "+"Total Amount: "+getTotalAmount()+"\n"+"Items: ");
+        System.out.print("OrderI ID: "+orderId+", "+"Customer: "+customer.getName()+", "+"Total Amount: "+totalAmount+"\n"+"Items: ");
         for(MenuItem Item : items)
         {
-            System.out.print(items+" - ");
+            System.out.print(Item.getName()+" - ");
         }
+    }
+    public double getTotalAmount()
+    {
+        return this.totalAmount;
     }
 
 
